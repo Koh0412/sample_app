@@ -1,4 +1,8 @@
+$LOAD_PATH << File.expand_path("./centuria", __dir__)
+
 require "centuria/version"
+require "generator/commands"
+require "generator/gene_base"
 
 module Centuria
   class Error < StandardError; end
