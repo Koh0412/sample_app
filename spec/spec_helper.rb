@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "sample_app"
+require "centuria"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

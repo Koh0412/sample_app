@@ -1,16 +1,16 @@
 lib = File.expand_path("lib", __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "sample_app/version"
+require "centuria/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "sample_app"
-  spec.version       = SampleApp::VERSION
+  spec.name          = "centuria"
+  spec.version       = Centuria.version
   spec.authors       = ["kohei"]
   spec.email         = ["point.out92@gmail.com"]
 
-  spec.summary       = %q{This is sample_app gem. so, this is test_gem}
+  spec.summary       = %q{This is memo gem. so, this is convenient!}
   spec.description   = %q{This gem can be some action for test.}
-  spec.homepage      = "https://github.com/Koh0412/sample_app"
+  spec.homepage      = "https://github.com/Koh0412/centuria"
   spec.license       = "MIT"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"

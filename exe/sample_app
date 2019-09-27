@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'sample_app'
-puts SampleApp.logging

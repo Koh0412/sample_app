@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'centuria'
+puts Centuria.logging

@@ -1,4 +1,6 @@
 source "https://rubygems.org"
 
-# Specify your gem's dependencies in sample_app.gemspec
+# Specify your gem's dependencies in centuria.gemspec
 gemspec
+
+gem "thor"

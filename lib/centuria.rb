@@ -1,6 +1,6 @@
-require "sample_app/version"
+require "centuria/version"
 
-module SampleApp
+module Centuria
   class Error < StandardError; end
     
     def self.greet(word)
