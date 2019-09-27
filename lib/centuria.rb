@@ -12,6 +12,6 @@ module Centuria
     end
     
     def self.logging
-      "[LOG]: this is log"
+      "[LOG]: this is logs"
     end
 end
