@@ -1,6 +1,6 @@
 require "generator/gene_base"
 
-class Generator < Thor::Group
+class Create < Thor::Group
   include Thor::Actions
   include GeneratorBase::Template
   

@@ -1,11 +1,17 @@
 #!/usr/bin/env ruby
 
 require 'centuria'
-# puts Centuria.logging
 
 module Cent
   class CLI < Thor
-    register(Generator, "g", "g [NAME]", "you can generate text file for memo")
+    map %w[-v] => :__version
+    
+    desc "-v", "you can confirm the version of Centuria"
+    def __version
+      puts "Centuria #{Centuria.gem_version}"
+    end
+    
+    register(Create, "new", "new [NAME]", "you can generate text file for memo")
     register(Clear, "clear", "clear [NAME]", "you can destroy file or directory")
   end
 end

@@ -1,5 +1,5 @@
 require "generator/clear"
-require "generator/generator"
+require "generator/create"
 
 module GeneratorCmd
 end
