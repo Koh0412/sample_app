@@ -4,9 +4,9 @@ require 'centuria'
 
 module Cent
   class CLI < Thor
-    map %w[-v] => :__version
+    map %w[-v --version] => :__version
+    desc "[-v, --version]", "you can confirm the version of Centuria"
     
-    desc "-v", "you can confirm the version of Centuria"
     def __version
       puts "Centuria #{Centuria.gem_version}"
     end

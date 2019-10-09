@@ -20,5 +20,11 @@ class Create < Thor::Group
   
   def create_readme
     create_file "#{file_name}/README.md"
+    say "[!]warning: please write yourself readme file"
   end
+  
+  def comment
+    say "template was successfully! please check your app: #{file_name}", :green
+  end
+  
 end
