@@ -4,6 +4,8 @@ require 'centuria'
 
 module Cent
   class CLI < Thor
+    package_name "Centuria"
+    
     map %w[-v --version] => :__version
     desc "[-v, --version]", "you can confirm the version of Centuria"
     
@@ -13,6 +15,7 @@ module Cent
     
     register(Create, "new", "new [NAME]", "you can generate text file for memo")
     register(Clear, "clear", "clear [NAME]", "you can destroy file or directory")
+    register(Tinker, "tinker", "tinker", "you can use console include Centuria")
   end
 end
 
