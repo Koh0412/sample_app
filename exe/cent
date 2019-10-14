@@ -6,11 +6,17 @@ module Cent
   class CLI < Thor
     package_name "Centuria"
     
-    map %w[-v --version] => :__version
-    desc "[-v, --version]", "you can confirm the version of Centuria"
+    default_command :default
+    class_option :version, aliases: '-v', type: :boolean, default: false
+    class_option :help, aliases: '-h', type: :boolean, default: false
     
-    def __version
-      puts "Centuria #{Centuria.gem_version}"
+    desc "", "default command"
+    def default
+      if ARGV == %w(-v) || ARGV == %w(--version)
+        say "Centuria #{Centuria.version}"
+      else
+        self.help
+      end
     end
     
     register(Create, "new", "new [NAME]", "you can generate text file for memo")
