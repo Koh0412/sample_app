@@ -1,8 +1,7 @@
-require "generator/gene_base"
+require "generators/gene_base"
 
 class Clear < Thor::Group
   include Thor::Actions
-  include GeneratorBase::Template
   
   argument :name
   

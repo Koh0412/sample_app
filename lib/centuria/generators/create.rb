@@ -1,4 +1,4 @@
-require "generator/gene_base"
+require "generators/gene_base"
 
 class Create < Thor::Group
   include Thor::Actions
