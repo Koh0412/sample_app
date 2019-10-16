@@ -7,6 +7,3 @@ ruby <%= "'#{RUBY_VERSION}'" -%>
 
 # this application gem
 gem 'centuria'
-
-# command line gem for centuria
-gem 'thor'
