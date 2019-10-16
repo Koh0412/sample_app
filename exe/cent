@@ -12,7 +12,7 @@ module Cent
     
     desc "", "default command"
     def default
-      if ARGV == %w(-v) || ARGV == %w(--version)
+      if options[:version]
         say "Centuria #{Centuria.version}"
       else
         self.help

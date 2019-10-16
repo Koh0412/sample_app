@@ -11,25 +11,23 @@ class Create < Thor::Group
   end
   
   def create_template
-    file = "#{file_name}"
     
-    if !use_symbol?(file)
-      templater "lib/app.txt"
-      templater "lib/version.rb"
-      create_file "#{file}/README.md"
+    if !use_symbol?(file_name)
       
-      comment(file)
+      files = %w(lib/app.rb Gemfile)
+      files.each do |file|
+        template "templates/#{file}", "#{file_name}/#{file}"
+      end
+      
+      template "templates/ruby-version.tt", "#{file_name}/.ruby-version"
+      create_file "#{file_name}/README.md"
+      
+      comment(file_name)
     else
       puts "your app name is include symbol cannot use this.\nplease one more."
     end
     
   end
-  
-  # def create_version
-  # end
-  
-  # def create_readme
-  # end
   
   private
   
@@ -46,5 +44,4 @@ class Create < Thor::Group
     say "[!]warning: please write yourself readme file"
     say "template was successfully! please check your app: #{file}", :green
   end
-  
 end
